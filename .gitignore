@@ -1,0 +1,11 @@
+Thumbs.db
+.DS_Store
+
+node_modules
+bower_components
+
+.nyc_output
+coverage
+esdoc
+lib
+npm-debug.log

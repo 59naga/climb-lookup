@@ -1,0 +1,34 @@
+notifications:
+  email: false
+
+# Quick boot options
+sudo: false
+cache:
+  directories:
+    - node_modules
+
+# Ignore version tags
+branches:
+  except:
+    - /^v[0-9]/
+
+# Setup process.env
+env:
+  global:
+    # CODECLIMATE_REPO_TOKEN
+    - secure: IjJSFgMRs0jAFuCbLn14o/83v1+mR6gShR70DTYBNowVLoqE2bNi2l+nUyG6KwBdZ4unU2k0SuxhcS/KW00JvpT90YVn5LeikHsUAZB53fwTAOreUYln8QpUZr1tqF8nWbKnsVdKku6hYOBi0h8F416JDlz3PoPHCktbO3K1hOGkmLCJFDKfwjo55CVKXTPpaV25vDtlOPT2/MWsKewRYlSYvta6x5Q7My6u6bTpD5jTSjtP96+na6Tj2bqzJ4FeKOzIfAlHFgzfuTh/fsUkj1cSwF8yfL1A9KIQnYIEdZTsIttYq6QfxyuuCUrAyGG+jPO5mik5SZ5IeLHIFS4KX3WgpxfUvLiPViy1jJCVO4a7QYn/vKAvrmjKmk4fI/La0VRIOqaNWiNp/wTYwyUcr5Viszh9psvEmABnRNntXS0UNMTTYIkUf/lF7cu3xaO+VOhNnYUnH/+VuOY26I+YMhy5jLhY8xnkrkIdzGtXOoCm2Jkt7Iqps0Bv3XhDBm7edA4XPA3LJgL3NH1I1vuJMatL209q/snO5kFHyPMjFhdbO8xqu74Y0CU/aBI4ZUk5nwodP42QGl+N0TE7WaxlmrSA4rrsvMlSsFH+M9Ab22enQEVC3qmBEm5WQzL4fNqKIDLhN95rquAyVWbjNvmgW6SkgwiDDBEgO/dBr4fDmEA=
+
+# Language options
+language: node_js
+node_js:
+  - '4.1.2'
+script:
+  - npm run test
+  - npm install codeclimate-test-reporter --global
+  - codeclimate-test-reporter < coverage/lcov.info
+
+# Npm publish options
+after_success:
+  - npm run compile
+  - npm run esdoc
+  - npm run semantic-release
