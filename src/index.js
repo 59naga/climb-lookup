@@ -29,10 +29,10 @@ export function getPaths(filePath) {
 }
 
 /**
-* lookup climbing recursively file like a `require`.
+* lookup the file while climbing to recursively. like a require().
 *
 * @function lookup
-* @param {string} file - lookup file name
+* @param {string} file - lookup file
 * @param {object} [options] -
 * @param {object} [options.cwd=process.cwd()] - begin path
 * @param {object} [options.mode=null] - pass to fs.accessSync as 2nd argument
@@ -69,7 +69,7 @@ export function lookup(file, ...params) {
 * Synchronous version of lookup
 *
 * @function lookupSync
-* @param {string} file - lookup file name
+* @param {string} file - lookup file
 * @param {object} [options]
 * @param {object} [options.cwd=process.cwd()] - begin path
 * @param {object} [options.mode=null] - pass to fs.accessSync as 2nd argument

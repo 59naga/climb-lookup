@@ -19,7 +19,7 @@ Climb lookup
   </a>
 </p>
 
-> a lookup climbing recursively file like a require.
+> lookup the file while climbing to recursively. like a require().
 
 Usage
 ---
@@ -54,7 +54,7 @@ cd test
 node -e "require(process.cwd()+'/package.json')" # Error: Cannot find module './test/package.json'
 ```
 
-`climb-lookup` is lookup climbing recursively file, like a `require`.
+`climb-lookup` is lookup the file while climbing to recursively. like a `require()`.
 
 ```bash
 cd my-project

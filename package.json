@@ -1,6 +1,6 @@
 {
   "name": "climb-lookup",
-  "description": "a lookup climbing recursively file like a require.",
+  "description": "lookup the file while climbing to recursively. like a require().",
   "main": "lib",
   "files": [
     "lib",
@@ -42,10 +42,10 @@
   },
   "keywords": [
     "require",
-    "readFile",
     "climb",
     "lookup",
-    "file"
+    "file",
+    "path"
   ],
   "author": "59naga <i59naga@icloud.com> (http://berabou.me)",
   "repository": {
