@@ -24,11 +24,11 @@ node_js:
   - '4.1.2'
 script:
   - npm run test
-  - npm install codeclimate-test-reporter --global
-  - codeclimate-test-reporter < coverage/lcov.info
 
 # Npm publish options
 after_success:
+  - npm install codeclimate-test-reporter --global
+  - codeclimate-test-reporter < coverage/lcov.info
   - npm run compile
   - npm run esdoc
   - npm run semantic-release
