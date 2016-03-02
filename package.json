@@ -50,11 +50,11 @@
   "author": "59naga <i59naga@icloud.com> (http://berabou.me)",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/59naga/rise-fs.git"
+    "url": "https://github.com/59naga/climb-lookup.git"
   },
   "bugs": {
-    "url": "https://github.com/59naga/rise-fs/issues"
+    "url": "https://github.com/59naga/climb-lookup/issues"
   },
-  "homepage": "https://github.com/59naga/rise-fs#readme",
+  "homepage": "https://github.com/59naga/climb-lookup#readme",
   "license": "MIT"
 }
