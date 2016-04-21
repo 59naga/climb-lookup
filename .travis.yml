@@ -23,7 +23,7 @@ language: node_js
 node_js:
   - '4.1.2'
 script:
-  - npm run test
+  - npm test
 
 # Npm publish options
 after_success:

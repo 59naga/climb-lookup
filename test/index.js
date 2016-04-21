@@ -7,12 +7,12 @@ test.cb('Retuns fullpath of package.json from ./test', t => {
 
   /** @test {lookupSync} */
   const filePath = lookupSync(file, { cwd: __dirname });
-  t.ok(filePath === path.join(__dirname, '..', 'package.json'));
+  t.true(filePath === path.join(__dirname, '..', 'package.json'));
 
   /** @test {lookup} */
   lookup(file, { cwd: __dirname }, (error, lookedupPath) => {
-    t.ok(error === null);
-    t.ok(lookedupPath === path.join(__dirname, '..', 'package.json'));
+    t.true(error === null);
+    t.true(lookedupPath === path.join(__dirname, '..', 'package.json'));
     t.end();
   });
 });
@@ -27,8 +27,8 @@ test.cb('Can\'t be found from root path it will be the exception.', t => {
 
   /** @test {lookup} */
   lookup(file, (error, lookedupPath) => {
-    t.ok(error);
-    t.ok(lookedupPath === undefined);
+    t.truthy(error);
+    t.true(lookedupPath === undefined);
     t.end();
   });
 });
