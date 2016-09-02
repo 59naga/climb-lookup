@@ -34,7 +34,7 @@ import {lookup, lookupSync, getPaths} from 'climb-lookup';
 console.log(lookupSync('package.json')); // /path/to/package.json
 ```
 
-[API Reference](https://npmcdn.com/climb-lookup/esdoc/index.html)
+[API Reference](https://unpkg.com/climb-lookup/esdoc/index.html)
 
 Why?
 ---
